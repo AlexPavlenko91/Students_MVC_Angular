@@ -7,6 +7,6 @@ import { Service } from "./generic/Service";
 export class SubjectService extends Service<SubjectModel>{
   constructor(http: HttpClient) {
     super(http);
-    this.baseUrl = "api/Subject";
+    this.baseUrl = "/api/Subject";
   }
 }
