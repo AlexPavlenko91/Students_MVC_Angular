@@ -102,6 +102,8 @@ namespace Context
                     ConcurrencyStamp = Guid.NewGuid().ToString()
                 });
 
+            
+
             //builder.Entity<TeacherSubject>()
             //   .HasKey(ts => new { ts.SubjectId, ts.TeacherId });
 
@@ -116,6 +118,33 @@ namespace Context
                 new Faculty { Id = Guid.NewGuid(), Name = "Администрирования" },
                 new Faculty { Id = Guid.NewGuid(), Name = "Дизайна и графики" },
                 new Faculty { Id = Guid.NewGuid(), Name = "Базовый" });
+
+            var depId1 = Guid.NewGuid();
+            var depId2 = Guid.NewGuid();
+            var depId3 = Guid.NewGuid();
+            var depId4 = Guid.NewGuid();
+            builder.Entity<Department>()
+               .HasData(
+                new Department { Id = depId1, Name = "Информационных технологий" },
+                new Department { Id = depId2, Name = "Радиоэлектроники" },
+                new Department { Id = depId3, Name = "Электротехники" },
+                new Department { Id = depId4, Name = "Ядерной физики" });
+
+            builder.Entity<Teacher>().HasData(
+                    new Teacher { Id = Guid.NewGuid(), FirstName = "Василий", LastName = "Петренко", DepartmentId = depId1 },
+                    new Teacher { Id = Guid.NewGuid(), FirstName = "Андрей", LastName = "Пилипенко", DepartmentId = depId1 },
+                    new Teacher { Id = Guid.NewGuid(), FirstName = "Алексей", LastName = "Затворницкий", DepartmentId = depId2 },
+                    new Teacher { Id = Guid.NewGuid(), FirstName = "Геннадий", LastName = "Узелков", DepartmentId = depId3 },
+                    new Teacher { Id = Guid.NewGuid(), FirstName = "Александр", LastName = "Усик", DepartmentId = depId4 }
+                );
+
+            builder.Entity<Subject>().HasData(
+                    new Subject { Id = Guid.NewGuid(), Name = "ASP.NET" },
+                    new Subject { Id = Guid.NewGuid(), Name = "React Redux" },
+                    new Subject { Id = Guid.NewGuid(), Name = "Angular" },
+                    new Subject { Id = Guid.NewGuid(), Name = "MSSQL" },
+                    new Subject { Id = Guid.NewGuid(), Name = "Windows Forms" }
+                );
 
 
             builder.Entity<ClassRoom>()

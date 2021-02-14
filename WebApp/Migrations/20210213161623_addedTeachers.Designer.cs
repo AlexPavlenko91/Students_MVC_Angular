@@ -4,14 +4,16 @@ using Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace WebApp.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210213161623_addedTeachers")]
+    partial class addedTeachers
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -143,22 +145,22 @@ namespace WebApp.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("bc7a0439-addd-4cef-bded-33e55b974cb1"),
+                            Id = new Guid("24798d7f-bda3-4fcb-9a95-c1effa3bf07e"),
                             Name = "5-A"
                         },
                         new
                         {
-                            Id = new Guid("896df545-7acd-4f23-9d3c-604e91189420"),
+                            Id = new Guid("c2b531cd-08c1-4f86-b922-efdddbace473"),
                             Name = "29-B"
                         },
                         new
                         {
-                            Id = new Guid("cfe9617b-69e1-4fc9-bb85-74d55a3f6a0d"),
+                            Id = new Guid("b317409b-4663-43f5-ab8e-bbf6c6ca36f7"),
                             Name = "10"
                         },
                         new
                         {
-                            Id = new Guid("ad8a9943-8fde-4b9e-b37f-feb029d2001e"),
+                            Id = new Guid("d3485256-2e7f-41b9-b7f8-0efb0bdf056c"),
                             Name = "22-C"
                         });
                 });
@@ -182,22 +184,22 @@ namespace WebApp.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("1cbf6e95-e6f0-4ab7-a5b0-f313c8fa2ed4"),
+                            Id = new Guid("c747616a-05bf-46a8-a1b0-cf55dde94931"),
                             Name = "Информационных технологий"
                         },
                         new
                         {
-                            Id = new Guid("2ab93055-8f5b-40af-a8df-dd1211af4801"),
+                            Id = new Guid("303b1933-8f58-42c4-8535-51820e4a2571"),
                             Name = "Радиоэлектроники"
                         },
                         new
                         {
-                            Id = new Guid("97fc8c45-a9e6-4335-b297-22d3d3bac5d9"),
+                            Id = new Guid("40aa54eb-3398-41f6-b6ca-c53a4138498a"),
                             Name = "Электротехники"
                         },
                         new
                         {
-                            Id = new Guid("dfe04a23-61ec-4267-9bc3-c391d6f4e8af"),
+                            Id = new Guid("39d05296-9691-42a3-a190-ffda44558658"),
                             Name = "Ядерной физики"
                         });
                 });
@@ -221,22 +223,22 @@ namespace WebApp.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("dc375d5a-0655-477d-8f85-44470a184a4a"),
+                            Id = new Guid("8182e4fc-cd26-42c5-ba97-b7de0c3af9ff"),
                             Name = "Программирования"
                         },
                         new
                         {
-                            Id = new Guid("63a287fa-7c02-4abc-9c05-4d79536a5afb"),
+                            Id = new Guid("63189e90-5c7e-40dc-bf5f-c04b58731d42"),
                             Name = "Администрирования"
                         },
                         new
                         {
-                            Id = new Guid("e553f08b-fafb-4c92-8fa3-5ff0a4687a9d"),
+                            Id = new Guid("3d149501-5e31-46de-bae2-b20d4d09ea19"),
                             Name = "Дизайна и графики"
                         },
                         new
                         {
-                            Id = new Guid("3a0d5bfe-4298-43d9-b0ac-928747c39b9b"),
+                            Id = new Guid("ba9cf275-a11f-4459-af20-7d04072112e8"),
                             Name = "Базовый"
                         });
                 });
@@ -413,33 +415,6 @@ namespace WebApp.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Subjects");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("3c25cabf-edff-4473-8733-98fb635090ec"),
-                            Name = "ASP.NET"
-                        },
-                        new
-                        {
-                            Id = new Guid("8d84c9d1-c882-4fd2-923c-7fbebf9bca19"),
-                            Name = "React Redux"
-                        },
-                        new
-                        {
-                            Id = new Guid("97c5f034-5f5c-427b-8de1-f7cd9a160300"),
-                            Name = "Angular"
-                        },
-                        new
-                        {
-                            Id = new Guid("e2aa47b5-ab54-42a3-8d42-4d27df158600"),
-                            Name = "MSSQL"
-                        },
-                        new
-                        {
-                            Id = new Guid("fa5d7fed-8c4c-4082-ba1a-a7da163d7917"),
-                            Name = "Windows Forms"
-                        });
                 });
 
             modelBuilder.Entity("Entities.Teacher", b =>
@@ -472,36 +447,36 @@ namespace WebApp.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("01ee1f02-6dea-4a41-9497-aa202cceec58"),
-                            DepartmentId = new Guid("1cbf6e95-e6f0-4ab7-a5b0-f313c8fa2ed4"),
+                            Id = new Guid("8eec3c13-3619-41a0-911e-b90e442d5152"),
+                            DepartmentId = new Guid("c747616a-05bf-46a8-a1b0-cf55dde94931"),
                             FirstName = "Василий",
                             LastName = "Петренко"
                         },
                         new
                         {
-                            Id = new Guid("bade60cc-8761-4f18-9845-0e85aed233a7"),
-                            DepartmentId = new Guid("1cbf6e95-e6f0-4ab7-a5b0-f313c8fa2ed4"),
+                            Id = new Guid("0b90c34f-bfce-49f5-9e9b-bbb78d1161f9"),
+                            DepartmentId = new Guid("c747616a-05bf-46a8-a1b0-cf55dde94931"),
                             FirstName = "Андрей",
                             LastName = "Пилипенко"
                         },
                         new
                         {
-                            Id = new Guid("8a20755c-9215-499b-8242-0535111168bf"),
-                            DepartmentId = new Guid("2ab93055-8f5b-40af-a8df-dd1211af4801"),
+                            Id = new Guid("4dc242eb-2875-43ee-883b-7faf9a8a4127"),
+                            DepartmentId = new Guid("303b1933-8f58-42c4-8535-51820e4a2571"),
                             FirstName = "Алексей",
                             LastName = "Затворницкий"
                         },
                         new
                         {
-                            Id = new Guid("d16fc464-4d0d-469f-a2c7-df595804476f"),
-                            DepartmentId = new Guid("97fc8c45-a9e6-4335-b297-22d3d3bac5d9"),
+                            Id = new Guid("75839303-cf6e-4be0-a200-ab84469b1ed1"),
+                            DepartmentId = new Guid("40aa54eb-3398-41f6-b6ca-c53a4138498a"),
                             FirstName = "Геннадий",
                             LastName = "Узелков"
                         },
                         new
                         {
-                            Id = new Guid("6d91dc2b-9a65-46d8-abbe-e9877ea28d83"),
-                            DepartmentId = new Guid("dfe04a23-61ec-4267-9bc3-c391d6f4e8af"),
+                            Id = new Guid("89feda8e-e81f-4ee2-81c8-ddc788a07f73"),
+                            DepartmentId = new Guid("39d05296-9691-42a3-a190-ffda44558658"),
                             FirstName = "Александр",
                             LastName = "Усик"
                         });
@@ -653,15 +628,15 @@ namespace WebApp.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "bd2cee95-90d0-4332-8243-bef53dbf5b96",
-                            ConcurrencyStamp = "bf235aa6-341c-471e-b3c7-4c9be349e20c",
+                            Id = "ebb940d4-b91b-4a06-b17b-c90bf0b8ea34",
+                            ConcurrencyStamp = "f3638a0f-8cf5-4b2e-82d1-439e70cf1b61",
                             Name = "Administrators",
                             NormalizedName = "ADMINISTRATORS"
                         },
                         new
                         {
-                            Id = "bac3b569-7637-4d4a-a6ec-4af47190854d",
-                            ConcurrencyStamp = "10899756-aad7-4271-8f16-ee28b375c788",
+                            Id = "8c5fec19-0be4-4e93-b427-79e111a48d3f",
+                            ConcurrencyStamp = "9b932985-0648-48ea-884f-5ceca7085df0",
                             Name = "Moderators",
                             NormalizedName = "MODERATORS"
                         });
