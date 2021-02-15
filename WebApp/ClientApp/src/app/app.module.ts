@@ -14,6 +14,7 @@ import { AuthorizeInterceptor } from 'src/api-authorization/authorize.intercepto
 import { TeacherService } from './_services/TeacherService';
 import { SubjectService } from './_services/SubjectService';
 import { Service } from './_services/generic/Service';
+import { TeachersComponent } from './components/teachers/teachers.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { Service } from './_services/generic/Service';
     NavMenuComponent,
     HomeComponent,
     CounterComponent,
-    FetchDataComponent
+    FetchDataComponent,
+    TeachersComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -32,6 +34,7 @@ import { Service } from './_services/generic/Service';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent, canActivate: [AuthorizeGuard] },
+      { path: 'teachers', component: TeachersComponent, canActivate: [AuthorizeGuard] }
     ])
   ],
   providers: [

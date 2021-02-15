@@ -26,11 +26,6 @@ namespace WebApp.Controllers
             _repository = repository;
         }
 
-        public ApiController(ITeacherRepository repository)
-        {
-            this.repository = repository;
-        }
-
         [HttpGet]
         public virtual async Task<IEnumerable<E>> Get()
         {
@@ -74,44 +69,4 @@ namespace WebApp.Controllers
                 return new StatusCodeResult(500);
         }
     }
-    //[Route("api/[controller]")]
-    //[ApiController]
-    //public class MarksController : ControllerBase
-    //{
-    //    IMarksRepository _repository;
-    //    public MarksController(IMarksRepository repository)
-    //    {
-    //        _repository = repository;
-    //    }
-
-    //    [HttpGet]
-    //    public List<Marks> ListData() {
-
-    //        return _repository.AllItems.ToList();   //посмотреть Async!!!
-    //    }
-
-    //   // [HttpGet]
-    //    //public Marks SetData(Guid Id)
-    //    //{
-
-    //    //}
-
-    //    //[HttpPost]
-    //    //public bool AddData(Marks mark)
-    //    //{
-
-    //    //}
-
-    //    //[HttpPut]
-    //    //public bool PutData(Marks mark)
-    //    //{
-
-    //    //}
-
-    //    //[HttpDelete]
-    //    //public bool DeleteData(Guid Id)
-    //    //{
-
-    //    //}
-    //}
 }

@@ -7,15 +7,15 @@ import { SubjectService } from '../../_services/SubjectService';
   templateUrl: './home.component.html',
 })
 export class HomeComponent {
- public services: SubjectModel[];
+ public subjects: SubjectModel[];
   constructor(public subjectService: SubjectService) {
     //debugger;
   }
   ngOnInit() {
     
     //debugger;
-    let services = this.subjectService.getAllItems().subscribe(data => {
-      this.services = data as SubjectModel[];
+    let subjects = this.subjectService.getAllItems().subscribe(data => {
+      this.subjects = data as SubjectModel[];
     });
 
   }
