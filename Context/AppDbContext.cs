@@ -22,6 +22,7 @@ namespace Context
         public DbSet<Subject> Subjects { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
         public DbSet<TeacherSubject> TeacherSubjects { get; set; }
+        public DbSet<Asset> Assets { get; set; }
 
         #region .ctors
         public AppDbContext(

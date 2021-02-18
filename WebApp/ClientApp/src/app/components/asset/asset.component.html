@@ -1,0 +1,10 @@
+
+<img src="/Asset/GetAsset" style="height:300px" />
+
+<div class="form-group">
+  <label for="file">Choose File</label>
+  <input type="file"
+         id="file"
+         (change)="handleFileInput($event.target.files)">
+  <button (click)="uploadFileToActivity()">Send</button>
+</div>

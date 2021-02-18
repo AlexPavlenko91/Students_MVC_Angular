@@ -5,6 +5,8 @@ import { TeacherService } from '../../_services/TeacherService';
 @Component({
   selector: 'app-teachers',
   templateUrl: './teachers.component.html',
+  styleUrls: ['./teachers.component.css']
+
 })
 export class TeachersComponent {
 

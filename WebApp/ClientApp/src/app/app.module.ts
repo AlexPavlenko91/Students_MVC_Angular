@@ -15,6 +15,8 @@ import { TeacherService } from './_services/TeacherService';
 import { SubjectService } from './_services/SubjectService';
 import { Service } from './_services/generic/Service';
 import { TeachersComponent } from './components/teachers/teachers.component';
+import { AssetComponent } from './components/asset/asset.component';
+import { AssetService } from './_services/AssetService';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { TeachersComponent } from './components/teachers/teachers.component';
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    TeachersComponent
+    TeachersComponent,
+    AssetComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -34,12 +37,14 @@ import { TeachersComponent } from './components/teachers/teachers.component';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent, canActivate: [AuthorizeGuard] },
-      { path: 'teachers', component: TeachersComponent, canActivate: [AuthorizeGuard] }
+      { path: 'teachers', component: TeachersComponent, canActivate: [AuthorizeGuard] },
+      { path: 'asset', component: AssetComponent, canActivate: [AuthorizeGuard] }
     ])
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthorizeInterceptor, multi: true },
     { provide: Service, useClass: Service },
+    { provide: AssetService, useClass: AssetService },
     { provide: TeacherService, useClass: TeacherService },
     { provide: SubjectService, useClass: SubjectService }
   ],

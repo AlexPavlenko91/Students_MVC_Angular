@@ -39,8 +39,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="ClientApp\src\app\_interfaces\imodel.ts" />
+    <None Remove="ClientApp\src\app\_models\AssetModel.ts" />
     <None Remove="ClientApp\src\app\_models\SubjectModel.ts" />
     <None Remove="ClientApp\src\app\_models\TeacherModel.ts" />
+    <None Remove="ClientApp\src\app\_services\AssetService.ts" />
     <None Remove="ClientApp\src\app\_services\baseService.ts" />
     <None Remove="ClientApp\src\app\_services\SubjectService.ts" />
     <None Remove="ClientApp\src\app\_services\TeacherService.ts" />
@@ -54,9 +56,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\Migrations\" />
+    <Folder Include="Models\" />
+    <Folder Include="Assets\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\src\app\_interfaces\imodel.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\_models\AssetModel.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="ClientApp\src\app\_models\SubjectModel.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
@@ -64,6 +71,9 @@
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="ClientApp\src\app\_services\generic\Service.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\_services\AssetService.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="ClientApp\src\app\_services\TeacherService.ts">

@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.EntityFrameworkCore;
-using WebApp.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -47,6 +46,7 @@ namespace WebApp
             services.AddTransient<ILessonRepository, LessonRepository>();
             services.AddTransient<IDepartmentRepository, DepartmentRepository>();
             services.AddTransient<IClassRoomRepository, ClassRoomRepository>();
+            services.AddTransient<IAssetRepository, AssetRepository>();
 
             services.AddDatabaseDeveloperPageExceptionFilter();
 
